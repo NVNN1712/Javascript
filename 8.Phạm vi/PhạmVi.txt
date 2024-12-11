@@ -1,0 +1,18 @@
+Tóm tắt
+Phạm vi toàn cục (Global scope): Biến toàn cục giống như cây cối trong khu vườn, có thể nhìn thấy từ mọi nơi. Chúng được khai báo ngoài mọi hàm, khối code và module, và có thể truy cập từ bất kỳ đâu trong code.
+
+Phạm vi hàm (Function scope): Mỗi hàm tạo ra phạm vi riêng của nó. Biến được khai báo trong hàm chỉ có thể truy cập trong hàm đó. Hàm con có thể truy cập biến của hàm cha nhưng ngược lại thì không.
+
+Phạm vi khối (Block scope): Các biến được khai báo trong một khối (được bao bọc bởi {}) chỉ có thể truy cập trong khối đó. Điều này áp dụng với let và const từ phiên bản ES6.
+
+Phạm vi module (Module scope): Từ ES6, modules giới hạn phạm vi biến, hàm, và các thành phần khác chỉ trong module đó, trừ khi được export.
+
+Lưu ý quan trọng: Mỗi hàm tạo ra phạm vi mới; scope chain cho phép truy cập biến từ phạm vi bên ngoài. Nên sử dụng let và const thay vì var để hạn chế lỗi liên quan đến phạm vi.
+
+Sai lầm thường gặp: Sử dụng biến toàn cục không cần thiết, hiểu nhầm phạm vi của var, let, const, và không nhận thức đúng về phạm vi hàm.
+
+Bảng tóm tắt: (Xem bảng tóm tắt phạm vi của các cách khai báo).
+
+let và const: Các biến được khai báo bằng let hoặc const có “phạm vi khối” (block scope). Chúng chỉ tồn tại và có thể được truy cập trong khối code mà chúng được khai báo.
+var và function: Ngược lại, biến được khai báo bằng var và hàm được khai báo bắt đầu với function có “phạm vi hàm” (function scope). Chúng có thể được truy cập từ bất kỳ nơi nào trong hàm mà chúng được định nghĩa.
+Tất cả các biến và hàm sẽ ở phạm vi toàn cục nếu chúng không nằm trong bất kỳ hàm, block, và module nào.
